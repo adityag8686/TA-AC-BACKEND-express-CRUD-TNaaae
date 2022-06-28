@@ -19,7 +19,7 @@ router.post( '/', ( req, res )=>{
 router.get( '/', ( req, res ) => {
     User.find( {}, ( err, user ) =>{
         if ( err ) return next( err );
-        res.render( 'allUsers', { user: user } );
+        res.render( 'allusers', { user: user } );
     } )
 } );
 
