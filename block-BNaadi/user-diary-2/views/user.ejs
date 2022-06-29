@@ -1,0 +1,70 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@adityag8686 
+RahulMandyal1
+/
+TA-AC-BACKEND-express-CRUD-TNaaae
+Public
+Code
+Pull requests
+8
+Actions
+Projects
+Wiki
+Security
+Insights
+TA-AC-BACKEND-express-CRUD-TNaaae/block-BNaadi/user-diary-2/views/users.ejs
+@RahulMandyal1
+RahulMandyal1 completed user diary
+Latest commit 4351e74 on Mar 26
+ History
+ 1 contributor
+48 lines (48 sloc)  1.32 KB
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>all the user in the database</title>
+</head>
+<body>
+    <main>
+        <section>
+            <table>
+            <thead>
+            <tr>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>age</th>
+                <th>bio</th>
+                <th>update</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(eachUser=>{ %>
+                <tr>
+                <td><%= eachUser.name%></td>
+                <td><%= eachUser.email%></td>
+                <td><%= eachUser.age%></td>
+                <td><%= eachUser.bio%></td>
+                <td>
+                <a href="/users/<%= eachUser._id%>/delete" class="btn  delete-btn">
+                    Delete
+                </a>
+                </td>
+            </tr>
+            <% }) %>
+            </tbody>
+        </table>
+    </section>
+    </main>
+</body>
+</html>
