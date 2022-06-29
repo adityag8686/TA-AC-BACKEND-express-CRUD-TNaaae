@@ -8,3 +8,6 @@ Q. Update a user through a update form
 - grab the data from update form
 - update user with new data using `findByIdAndUpdate`
 - redirect to '/users' route i.e. list of users page
+
+
+        
